@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Calendar, Filter } from 'lucide-react';
+import { ExternalLink, Github, Filter } from 'lucide-react';
 import { projects } from '@/data';
 
 export default function ProjetosPage() {
@@ -35,8 +35,7 @@ export default function ProjetosPage() {
               Meus Projetos
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Uma coleção dos meus trabalhos mais significativos, desde aplicações web 
-              complexas até projetos experimentais inovadores.
+              Uma coleção dos meus trabalhos mais significativos, divirta-se!.
             </p>
           </motion.div>
         </div>

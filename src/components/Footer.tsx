@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { socialLinks } from '@/data';
 
 const iconMap = {

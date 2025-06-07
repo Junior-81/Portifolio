@@ -5,8 +5,9 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react';
 import { personalInfo, socialLinks } from '@/data';
+import emailjs from '@emailjs/browser';
 
 // Schema de validação do formulário
 const contactSchema = z.object({
@@ -23,6 +24,7 @@ const iconMap = {
   Linkedin,
   Twitter,
   Mail: Mail,
+  Phone: MessageCircle, // Ícone do WhatsApp - MessageCircle é uma boa representação
 };
 
 export default function ContatoPage() {
@@ -42,15 +44,46 @@ export default function ContatoPage() {
     setIsSubmitting(true);
     
     try {
-      // Simular envio do formulário
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Configurações do EmailJS - usando variáveis de ambiente
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
       
-      // Aqui você integraria com um serviço de email real
-      console.log('Dados do formulário:', data);
+      // Verificar se as configurações estão disponíveis e configuradas
+      if (!serviceId || !templateId || !publicKey || 
+          serviceId === 'service_portfolio' || 
+          templateId === 'template_contact' || 
+          publicKey === 'YOUR_PUBLIC_KEY') {
+        
+        console.warn('EmailJS não configurado. Dados do formulário:', data);
+        
+        // Por enquanto, simular sucesso para demonstração
+        // TODO: Configurar EmailJS conforme EMAILJS_SETUP.md
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
+        setSubmitStatus('success');
+        reset();
+        return;
+      }
       
+      // Dados do template
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message,
+        to_name: 'Ailton',
+        to_email: 'jab.junior81@gmail.com',
+      };
+
+      // Enviar email via EmailJS
+      const response = await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      console.log('Email enviado com sucesso!', response);
       setSubmitStatus('success');
       reset();
     } catch (error) {
+      console.error('Erro ao enviar email:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -64,23 +97,23 @@ export default function ContatoPage() {
     {
       icon: Mail,
       title: 'Email',
-      info: personalInfo.email,
-      link: `mailto:${personalInfo.email}`,
-      description: 'Envie um email direto'
+      info: 'jab.junior81@gmail.com',
+      description: 'Envie um email direto',
+      link: null
     },
     {
       icon: MapPin,
       title: 'Localização',
       info: personalInfo.location,
-      link: null,
-      description: 'Onde estou baseado'
+      description: 'Recife, PE, Brasil',
+      link: null
     },
     {
       icon: Phone,
       title: 'Telefone',
-      info: personalInfo.phone || '+55 (11) 99999-9999',
-      link: personalInfo.phone ? `tel:${personalInfo.phone}` : null,
-      description: 'Vamos conversar por telefone'
+      info: personalInfo.phone || '+55 (81) 98148-1075',
+      description: 'Vamos conversar por telefone',
+      link: null
     }
   ];
 
@@ -169,8 +202,10 @@ export default function ContatoPage() {
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
                   Ou me encontre nas redes sociais
                 </h3>
-                <div className="flex gap-4">
-                  {socialLinks.map((social) => {
+                
+                {/* Static Social Icons */}
+                <div className="flex gap-4 flex-wrap">
+                  {socialLinks.map((social, index) => {
                     const IconComponent = iconMap[social.icon as keyof typeof iconMap];
                     return (
                       <motion.a
@@ -178,7 +213,13 @@ export default function ContatoPage() {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        whileHover={{ 
+                          scale: 1.1,
+                          transition: { duration: 0.2 }
+                        }}
                         whileTap={{ scale: 0.95 }}
                         className="p-3 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
                         title={social.name}
@@ -311,6 +352,12 @@ export default function ContatoPage() {
                     <p className="text-green-800 dark:text-green-300 text-sm">
                       ✅ Mensagem enviada com sucesso! Entrarei em contato em breve.
                     </p>
+                    {(!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 
+                      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID === 'service_portfolio') && (
+                      <p className="text-green-700 dark:text-green-400 text-xs mt-2">
+                        ℹ️ EmailJS ainda não está configurado. Dados salvos localmente para demonstração.
+                      </p>
+                    )}
                   </div>
                 )}
 
@@ -318,6 +365,9 @@ export default function ContatoPage() {
                   <div className="p-4 bg-red-100 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg">
                     <p className="text-red-800 dark:text-red-300 text-sm">
                       ❌ Erro ao enviar mensagem. Tente novamente ou use outro meio de contato.
+                    </p>
+                    <p className="text-red-700 dark:text-red-400 text-xs mt-2">
+                      💡 Consulte o arquivo EMAILJS_SETUP.md para configurar o envio de emails.
                     </p>
                   </div>
                 )}

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Calendar } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { Project } from '@/types';
 
 interface ProjectCardProps {

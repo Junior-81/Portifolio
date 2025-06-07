@@ -1,12 +1,12 @@
 import { PersonalInfo, Project, Experience, Skill, SocialLink } from '@/types';
 
 export const personalInfo: PersonalInfo = {
-  name: 'José Ailton',
-  title: 'Desenvolvedor Full Stack | Backend & Frontend',
-  bio: 'Desenvolvedor Full Stack com mais de 3 anos de experiência em desenvolvimento web. Especializado em tecnologias backend como Node.js, Python e PostgreSQL, e frontend com React, Next.js e TypeScript. Apaixonado por criar soluções robustas e escaláveis.',
+  name: 'Ailton Junior',
+  title: 'Desenvolvedor Full Stack', 
+  bio: 'Desenvolvedor Full Stack em formação, apaixonado por tecnologia, aprendizado contínuo e desafios. Tenho experiência prática no desenvolvimento e manutenção de sistemas front-end e back-end, sempre focando em performance, usabilidade e boas práticas. Gosto de construir soluções escaláveis, colaborar com equipes e entregar valor real para o usuário. Estou sempre em busca de evoluir e contribuir com projetos inovadores!.',
   location: 'Recife, PE - Brasil',
   email: 'jab.junior81@gmail.com',
-  avatar: '/images/avatar.svg',
+  avatar: '/images/avatar.jpg',
   resumeUrl: '/resume.pdf'
 };
 
@@ -23,7 +23,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'Email',
-    url: 'jab.junior81@gmail.com',
+    url: 'mailto:jab.junior81@gmail.com',
     icon: 'Mail'
   },
   {
@@ -34,173 +34,185 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const skills: Skill[] = [
-  // Backend
-  { name: 'Node.js', level: 'Avançado', category: 'Backend' },
-  { name: 'Python', level: 'Avançado', category: 'Backend' },
-  { name: 'TypeScript', level: 'Avançado', category: 'Backend' },
-  { name: 'Express.js', level: 'Avançado', category: 'Backend' },
-  { name: 'NestJS', level: 'Intermediário', category: 'Backend' },
-  { name: 'Django', level: 'Intermediário', category: 'Backend' },
-  { name: 'FastAPI', level: 'Intermediário', category: 'Backend' },
-  
   // Frontend
-  { name: 'React', level: 'Avançado', category: 'Frontend' },
-  { name: 'Next.js', level: 'Avançado', category: 'Frontend' },
-  { name: 'JavaScript', level: 'Expert', category: 'Frontend' },
-  { name: 'HTML5', level: 'Expert', category: 'Frontend' },
-  { name: 'CSS3', level: 'Avançado', category: 'Frontend' },
-  { name: 'Tailwind CSS', level: 'Avançado', category: 'Frontend' },
-  { name: 'Bootstrap', level: 'Avançado', category: 'Frontend' },
-  { name: 'Sass/SCSS', level: 'Avançado', category: 'Frontend' },
-  
+  { name: 'React', level: 'Intermediário', category: 'Frontend' },
+  { name: 'Next.js', level: 'Intermediário', category: 'Frontend' },
+  { name: 'TypeScript', level: 'Intermediário', category: 'Frontend' },
+  { name: 'JavaScript', level: 'Avançado', category: 'Frontend' },
+  { name: 'HTML5', level: 'Avançado', category: 'Frontend' },
+  { name: 'CSS3', level: 'Intermediário', category: 'Frontend' },
+  { name: 'Tailwind CSS', level: 'Intermediário', category: 'Frontend' },
+  { name: 'Bootstrap', level: 'Intermediário', category: 'Frontend' },
+  { name: 'Sass/SCSS', level: 'Iniciante', category: 'Frontend' },
+
+  // Backend
+  { name: 'Node.js', level: 'Intermediário', category: 'Backend' },
+  { name: 'Express.js', level: 'Intermediário', category: 'Backend' },
+  { name: 'NestJS', level: 'Iniciante', category: 'Backend' },
+  { name: 'Python', level: 'Intermediário', category: 'Backend' },
+  { name: 'FastAPI', level: 'Iniciante', category: 'Backend' },
+  { name: 'Java', level: 'Intermediário', category: 'Backend' },
+  { name: 'Spring Boot', level: 'Intermediário', category: 'Backend' },
+  { name: 'JPA/Hibernate', level: 'Iniciante', category: 'Backend' },
+  { name: 'JDBC/ORM', level: 'Iniciante', category: 'Backend' },
+
   // Database
-  { name: 'PostgreSQL', level: 'Avançado', category: 'Database' },
-  { name: 'MySQL', level: 'Avançado', category: 'Database' },
-  { name: 'MongoDB', level: 'Intermediário', category: 'Database' },
-  { name: 'Redis', level: 'Intermediário', category: 'Database' },
-  { name: 'Prisma ORM', level: 'Avançado', category: 'Database' },
-  { name: 'SQLAlchemy', level: 'Intermediário', category: 'Database' },
-  
+  { name: 'PostgreSQL', level: 'Intermediário', category: 'Database' },
+  { name: 'MySQL', level: 'Intermediário', category: 'Database' },
+  { name: 'MongoDB', level: 'Iniciante', category: 'Database' },
+  { name: 'Prisma ORM', level: 'Intermediário', category: 'Database' },
+  { name: 'SQLAlchemy', level: 'Iniciante', category: 'Database' },
+
   // DevOps & Tools
-  { name: 'Docker', level: 'Intermediário', category: 'DevOps' },
-  { name: 'AWS', level: 'Intermediário', category: 'DevOps' },
-  { name: 'Vercel', level: 'Avançado', category: 'DevOps' },
-  { name: 'Linux', level: 'Intermediário', category: 'DevOps' },
-  { name: 'Nginx', level: 'Intermediário', category: 'DevOps' },
-  
+  { name: 'Docker', level: 'Iniciante', category: 'DevOps' },
+  { name: 'AWS', level: 'Iniciante', category: 'DevOps' },
+  { name: 'Vercel', level: 'Intermediário', category: 'DevOps' },
+  { name: 'Linux', level: 'Iniciante', category: 'DevOps' },
+  { name: 'GitHub Actions', level: 'Intermediário', category: 'DevOps' },
+
   // Outras
-  { name: 'Git', level: 'Avançado', category: 'Outras' },
-  { name: 'REST APIs', level: 'Avançado', category: 'Outras' },
-  { name: 'GraphQL', level: 'Intermediário', category: 'Outras' },
-  { name: 'JWT', level: 'Avançado', category: 'Outras' },
-  { name: 'Microservices', level: 'Intermediário', category: 'Outras' },
-  { name: 'TDD', level: 'Intermediário', category: 'Outras' }
+  { name: 'Git', level: 'Intermediário', category: 'Outras' },
+  { name: 'REST APIs', level: 'Intermediário', category: 'Outras' },
+  { name: 'GraphQL', level: 'Iniciante', category: 'Outras' },
+  { name: 'JWT', level: 'Intermediário', category: 'Outras' },
+  { name: 'Microservices', level: 'Iniciante', category: 'Outras' },
+  { name: 'TDD', level: 'Iniciante', category: 'Outras' },
+  { name: 'WebSockets', level: 'Iniciante', category: 'Outras' },
+  { name: 'Testes (JUnit, Jest, React Testing Library)', level: 'Iniciante', category: 'Outras' }
 ];
 
 export const projects: Project[] = [
   {
-    id: 'ecommerce-api',
-    title: 'API E-commerce Completa',
-    description: 'API RESTful robusta para e-commerce com autenticação JWT, processamento de pagamentos e gestão de inventário.',
-    longDescription: 'Desenvolvimento de uma API completa para e-commerce utilizando Node.js e Express. Inclui sistema de autenticação com JWT, integração com gateways de pagamento (Stripe/PagSeguro), gestão de produtos, carrinho de compras, pedidos e usuários. Implementação de cache com Redis e documentação com Swagger.',
-    technologies: ['Node.js', 'Express.js', 'PostgreSQL', 'Prisma', 'JWT', 'Redis', 'Stripe API'],
-    image: '/images/projects/ecommerce-api.svg',
-    githubUrl: 'https://github.com/jose-ailton/ecommerce-api',
+    id: 'robo-supervisorio',
+    title: 'Robô Supervisório - Sistema de Controle AGV',
+    description: 'Sistema de simulação e controle supervisório de robô móvel (AGV) com comunicação MQTT em tempo real.',
+    longDescription: 'Sistema completo de simulação e controle supervisório de um robô móvel (AGV - Veículo Guiado Automaticamente) em ambiente 3D. Utiliza PyBullet para simulação física realista com obstáculos aleatórios, comunicação MQTT para controle remoto em tempo real e Node-RED para painel de controle web interativo. O robô responde a comandos básicos (frente, ré, esquerda, direita, parar), detecta obstáculos automaticamente, envia alertas de proximidade e transmite sua posição continuamente sem interrupções no funcionamento.',
+    technologies: ['Python', 'PyBullet', 'MQTT', 'Node-RED', 'Mosquitto Broker', 'JavaScript'],
+    image: '/images/projects/robo-supervisorio.jpeg',
+    githubUrl: 'https://github.com/Junior-81/Robo_Supervisorio',
+    demoUrl: 'https://www.youtube.com/watch?v=RNUIgsZoNa0',
     featured: true,
+    year: 2025
+  },
+  {
+    id: 'santander-dev-week-api',
+    title: 'Santander Dev Week 2025 API',
+    description: 'API RESTful para sistema bancário digital com CRUD completo e arquitetura robusta.',
+    longDescription: 'API RESTful para sistema bancário digital desenvolvida durante o Desafio Santander Dev Week 2025 da DIO. Implementa CRUD completo de usuários bancários com relacionamentos JPA (conta, cartão, features, notícias), validação robusta com Bean Validation, documentação automática com Swagger/OpenAPI e deploy automatizado no Railway. Utiliza H2 para desenvolvimento e PostgreSQL para produção, com containerização Docker.',
+    technologies: ['Java 17', 'Spring Boot 3', 'Spring Data JPA', 'H2 Database', 'PostgreSQL', 'Docker', 'Railway', 'Swagger/OpenAPI'],
+    image: '/images/projects/santander-dev-week-api.svg',
+    githubUrl: 'https://github.com/Junior-81/Projt_api_DIo',
+    featured: true,
+    year: 2025
+  },
+  {
+    id: 'cryptoboard-dashboard',
+    title: 'CryptoBoard - Dashboard de Criptomoedas',
+    description: 'Dashboard completo para monitoramento de criptomoedas em tempo real com conversor de moedas e gráficos interativos.',
+    longDescription: 'Aplicação web moderna desenvolvida com Next.js que permite monitorar criptomoedas em tempo real. Possui dashboard completo com informações detalhadas, sistema de favoritos, conversor de moedas entre criptomoedas e moedas fiduciárias (BRL, USD, EUR), gráficos históricos interativos, filtros de busca, tema claro/escuro e design totalmente responsivo. Utiliza a API do CoinGecko com sistema de cache para otimização.',
+    technologies: ['Next.js', 'TypeScript', 'CoinGecko API', 'Chart.js', 'Axios', 'Tailwind CSS'],
+    image: '/images/projects/cryptoboard-dashboard.jpg',
+    demoUrl: 'https://projeto-dash-bord-crip-20.vercel.app',
+    githubUrl: 'https://github.com/Junior-81/Projeto_DashBord_Crip',
+    featured: true,
+    year: 2025
+  }, 
+   {
+    id: 'nextjs-landing-page',
+    title: 'Starter - Landing Page Next.js',
+    description: 'Landing page moderna e responsiva desenvolvida com Next.js, React e TypeScript para desenvolvedores.',
+    longDescription: 'Landing page moderna, responsiva e otimizada, feita com Next.js, React, TypeScript e Tailwind CSS. Ideal para desenvolvedores que querem um ponto de partida profissional e bonito para seus projetos. Inclui header fixo transparente, seção hero com gradientes, área de features detalhadas com App Router, otimização de imagens, rotas de API integradas, design responsivo e animações suaves.',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'App Router'],
+    image: '/images/projects/nextjs-landing-page.jpg',
+    githubUrl: 'https://github.com/Junior-81/Projt.next_page',
+    featured: false,
+    year: 2025
+  },
+  {
+    id: 'courses-track-kotlin',
+    title: 'CoursesTrack - Gerenciador de Cursos',
+    description: 'Aplicativo Android nativo em Kotlin para gerenciar cursos e acompanhar progresso de aprendizagem.',
+    longDescription: 'Aplicativo Android desenvolvido em Kotlin para facilitar o gerenciamento de cursos e controlar o progresso de aprendizagem. Inclui cadastro de usuários, autenticação Firebase, gerenciamento completo de cursos, instituições e matérias, acompanhamento de progresso e interface moderna com Material Design. Projeto desenvolvido em equipe seguindo arquitetura MVVM.',
+    technologies: ['Kotlin', 'Firebase Auth', 'Firestore', 'Hilt', 'Navigation', 'Material Design', 'MVVM'],
+    image: '/images/projects/courses-track-kotlin.jpg',
+    githubUrl: 'https://github.com/Junior-81/Projeto-Kotlin',
+    featured: false,
     year: 2024
   },
   {
-    id: 'task-manager-fullstack',
-    title: 'Sistema de Gestão de Tarefas',
-    description: 'Aplicação full stack para gestão de projetos e tarefas com colaboração em tempo real.',
-    longDescription: 'Sistema completo de gestão de tarefas desenvolvido com React/Next.js no frontend e Node.js no backend. Funcionalidades incluem autenticação, criação de projetos, atribuição de tarefas, notificações em tempo real com WebSocket, dashboard analítico e exportação de relatórios.',
-    technologies: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Socket.io', 'Tailwind CSS'],
-    image: '/images/projects/task-manager.svg',
-    demoUrl: 'https://taskmanager-demo.vercel.app',
-    githubUrl: 'https://github.com/jose-ailton/task-manager-fullstack',
-    featured: true,
-    year: 2024
+    id: 'biosafe-iot',
+    title: 'BioSafe - Sistema IoT de Monitoramento',
+    description: 'Sistema IoT completo para monitoramento baseado em MQTT com dashboard em tempo real.',
+    longDescription: 'Sistema IoT desenvolvido para monitoramento em tempo real utilizando arquitetura baseada em MQTT. Implementa comunicação entre dispositivos IoT através do broker Mosquitto, processamento de dados com Node-RED e dashboard interativo. Inclui monitoramento de sensores de temperatura e umidade, controle de dispositivos remotos, alertas configuráveis, API REST para integração e interface web responsiva. Containerizado com Docker para facilitar deployment.',
+    technologies: ['C++', 'JavaScript', 'MQTT', 'Node-RED', 'Mosquitto', 'Docker', 'ESP32', 'Arduino'],
+    image: '/images/projects/biosafe-iot.svg',
+    githubUrl: 'https://github.com/Junior-81/biosafe-iot',
+    featured: false,
+    year: 2025
   },
   {
-    id: 'financial-dashboard',
-    title: 'Dashboard Financeiro',
-    description: 'Dashboard interativo para controle de finanças pessoais com gráficos e relatórios.',
-    longDescription: 'Aplicação web para controle financeiro pessoal com categorização de gastos, metas financeiras, gráficos interativos e geração de relatórios. Backend desenvolvido em Python Django com frontend em React.',
-    technologies: ['React', 'Python', 'Django', 'PostgreSQL', 'Chart.js', 'Material-UI'],
-    image: '/images/projects/financial-dashboard.svg',
-    demoUrl: 'https://finance-dashboard-demo.netlify.app',
-    githubUrl: 'https://github.com/jose-ailton/financial-dashboard',
-    featured: true,
-    year: 2023
-  },  {
-    id: 'microservices-auth',
-    title: 'Sistema de Autenticação Microserviços',
-    description: 'Arquitetura de microserviços para autenticação com JWT, OAuth2 e Redis cache.',
-    longDescription: 'Sistema distribuído de autenticação desenvolvido com arquitetura de microserviços. Inclui serviços independentes para usuários, autenticação, autorização, com cache Redis, documentação Swagger e deploy com Docker.',
-    technologies: ['Node.js', 'Express', 'Redis', 'MongoDB', 'JWT', 'Docker'],
-    image: '/images/projects/microservices-auth.svg',
-    githubUrl: 'https://github.com/jose-ailton/microservices-auth',
+    id: 'board-java-kanban',
+    title: 'Board - Sistema de Gerenciamento Kanban',
+    description: 'Sistema de gerenciamento de quadros Kanban desenvolvido em Java com interface de linha de comando.',
+    longDescription: 'Sistema completo de gerenciamento de quadros Kanban desenvolvido em Java inspirado na metodologia ágil. Implementa CRUD completo de boards e cards, sistema de colunas personalizáveis (INITIAL, PENDING, FINAL, CANCEL), controle de bloqueios com histórico, persistência em MySQL com migrations automáticas via Liquibase e interface de linha de comando interativa. Segue padrões arquiteturais como MVC, DAO, DTO e Service Layer.',
+    technologies: ['Java 17', 'MySQL', 'Liquibase', 'Gradle', 'Lombok', 'JDBC'],
+    image: '/images/projects/board-java-kanban.svg',
+    githubUrl: 'https://github.com/Junior-81/board-java',
     featured: false,
-    year: 2023
+    year: 2025
   },
-  {
-    id: 'inventory-system',
-    title: 'Sistema de Controle de Estoque',
-    description: 'Sistema web para controle de inventário com alertas de baixo estoque e relatórios.',
-    technologies: ['Python', 'FastAPI', 'PostgreSQL', 'React', 'TypeScript', 'Docker'],
-    image: '/images/projects/inventory-system.svg',
-    githubUrl: 'https://github.com/jose-ailton/inventory-system',
-    featured: false,
-    year: 2023
-  },
-  {
-    id: 'restaurant-pos',
-    title: 'Sistema PDV para Restaurante',
-    description: 'Point of Sale (PDV) para restaurantes com gestão de mesas, pedidos e cardápio.',
-    technologies: ['Node.js', 'Express', 'MySQL', 'React', 'Socket.io', 'Thermal Printer API'],
-    image: '/images/projects/restaurant-pos.svg',
-    githubUrl: 'https://github.com/jose-ailton/restaurant-pos',
-    featured: false,
-    year: 2022
-  }
 ];
 
 export const experiences: Experience[] = [
+ {
+  id: 'fullstack-dev-2024',
+  company: 'Prefeitura Municipal de Jaboatão dos Guararapes',
+  position: 'Desenvolvedor Full Stack',
+  startDate: '2025 - Atual',
+  description: `Atuação abrangente em desenvolvimento full stack, englobando experiências sólidas em front-end e back-end, além de integração de sistemas e colaboração com equipes multidisciplinares. No front-end, trabalhei com sustentação e evolução de sistemas utilizando TypeScript, JavaScript, HTML, CSS e GitHub, focando em performance, usabilidade e manutenção de aplicações legadas. Fui responsável por implementar melhorias, arquitetar componentes e realizar integrações com APIs REST, além de contribuir em code reviews, versionamento e boas práticas de desenvolvimento.
+
+No back-end, participei de projetos de sustentação e desenvolvimento de sistemas utilizando Java, Spring Boot, Spring Data JPA, além de implementação e manutenção de APIs REST, integração com bancos de dados relacionais (MySQL, PostgreSQL), criação de consultas SQL, mapeamentos relacionais e aplicação de padrões de arquitetura como SOLID e Clean Code. Apoiei ainda a documentação técnica e a equipe em processos de integração.
+
+O contato contínuo com times de suporte e infraestrutura me proporcionou uma visão completa do ciclo de vida das aplicações, desde o desenvolvimento até o monitoramento, análise de incidentes e melhorias contínuas nos ambientes corporativos.
+
+Principais tecnologias: Java, Spring Boot, JPA, SQL, JavaScript, TypeScript, HTML, CSS, Git, PostgreSQL, MySQL.
+`,
+  technologies: [
+    'Java', 'Spring Boot', 'Spring Data JPA', 'SQL',
+    'JavaScript', 'TypeScript', 'HTML', 'CSS',
+     'Docker', 'PostgreSQL', 'MySQL',
+    'Git'
+  ],
+  type: 'work'
+},
   {
-    id: 'fullstack-dev-2024',
-    company: 'TechSolutions Brasil',
-    position: 'Desenvolvedor Full Stack Pleno',
-    startDate: '2023-03',
-    description: 'Desenvolvimento e manutenção de aplicações web usando Node.js, React e PostgreSQL. Implementação de APIs RESTful, otimização de performance e colaboração em equipes ágeis. Responsável por arquitetar soluções escaláveis e mentorizar desenvolvedores júniores.',
-    technologies: ['Node.js', 'React', 'PostgreSQL', 'TypeScript', 'Docker', 'AWS'],
-    type: 'work'
-  },
-  {
-    id: 'backend-dev-2022',
-    company: 'Inovare Sistemas',
-    position: 'Desenvolvedor Backend',
-    startDate: '2022-01',
-    endDate: '2023-02',
-    description: 'Especialização em desenvolvimento backend com Python e Django. Criação de APIs robustas, integração com bancos de dados MySQL e PostgreSQL, implementação de sistemas de autenticação e autorização. Trabalho com microserviços e containerização.',
-    technologies: ['Python', 'Django', 'MySQL', 'PostgreSQL', 'Redis', 'Docker'],
-    type: 'work'
-  },
-  {
-    id: 'junior-dev-2021',
-    company: 'Digital Web PE',
-    position: 'Desenvolvedor Web Júnior',
-    startDate: '2021-06',
-    endDate: '2021-12',
-    description: 'Início da carreira profissional desenvolvendo sites e sistemas web. Trabalho com HTML, CSS, JavaScript e PHP. Aprendizado de frameworks modernos como React e Node.js. Participação em projetos de e-commerce e sites institucionais.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'WordPress'],
-    type: 'work'
-  },
-  {
-    id: 'freelancer-2020',
-    company: 'Freelancer',
-    position: 'Desenvolvedor Web Freelancer',
-    startDate: '2020-08',
-    endDate: '2021-05',
-    description: 'Desenvolvimento de sites e sistemas web para pequenas empresas locais. Criação de landing pages, sites institucionais e pequenos sistemas de gestão. Primeira experiência profissional na área de desenvolvimento.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Bootstrap'],
-    type: 'work'
-  },
+  id: 'support-ti-2024',
+  company: 'Prefeitura Municipal de Jaboatão dos Guararapes',
+  position: 'Suporte de TI',
+  startDate: '2024 - 2025',
+  description: `Experiência sólida em suporte técnico, com ênfase no gerenciamento de chamados via GLPI, monitoramento de infraestrutura utilizando Zabbix e análise de causa raiz (RCA) para resolução de problemas recorrentes. Responsável por garantir o atendimento dentro do SLA, documentar soluções técnicas e integrar ferramentas de monitoramento e atendimento. Atuação voltada para estabilidade, eficiência operacional e suporte a times de desenvolvimento e usuários finais.`,
+  technologies: [
+    'GLPI', 'Zabbix', 'Monitoramento de Infraestrutura', 'Atendimento ao Usuário', 'Documentação Técnica'
+  ],
+  type: 'work'
+},
+
   {
     id: 'computer-science',
-    company: 'Universidade Federal de Pernambuco (UFPE)',
+    company: 'Faculdade Nova Roma',
     position: 'Bacharelado em Ciência da Computação',
-    startDate: '2018-03',
-    endDate: '2022-12',
-    description: 'Formação completa em Ciência da Computação com foco em desenvolvimento de software, algoritmos e estruturas de dados. Participação em projetos de extensão e iniciação científica. TCC sobre desenvolvimento de aplicações web modernas.',
+    startDate: '2022-02',
+    endDate: '2026-01',
+    description: 'Formação completa em Ciência da Computação com ênfase em desenvolvimento de software, algoritmos avançados, estruturas de dados e arquitetura de sistemas computacionais. A trajetória acadêmica abrange desde fundamentos de programação, banco de dados e engenharia de software até conteúdos avançados como inteligência artificial, computação gráfica, visão computacional, sistemas embarcados, computação em nuvem, Internet das Coisas (IoT) e automação robótica.',
     type: 'education'
   },
   {
     id: 'technical-course',
-    company: 'SENAI PE',
-    position: 'Técnico em Informática',
-    startDate: '2016-02',
-    endDate: '2017-12',
-    description: 'Curso técnico abrangendo fundamentos da programação, banco de dados, redes de computadores e manutenção de hardware. Primeiro contato formal com programação e desenvolvimento web.',
+    company: 'Faculdade Nova Roma',
+    position: 'Tecnólogo Análise e Desenvolvimento de Sistemas',
+    startDate: '2022-02',
+    endDate: '2024-02',
+    description: 'Formação tecnológica em Análise e Desenvolvimento de Sistemas com foco em desenvolvimento de software, arquitetura de sistemas, banco de dados e aplicações web e mobile. Estudo aprofundado de algoritmos, estruturas de dados, programação orientada a objetos e desenvolvimento full stack, incluindo projetos práticos em todas as etapas do curso.',
     type: 'education'
   }
 ];

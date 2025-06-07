@@ -1,0 +1,81 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#apiGradient)"/>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="apiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.05" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- Main API Container -->
+  <rect x="20" y="30" width="360" height="240" rx="12" fill="url(#cardGradient)" stroke="rgba(255,255,255,0.2)" stroke-width="1" filter="url(#shadow)"/>
+  
+  <!-- Header Section -->
+  <rect x="30" y="40" width="340" height="50" rx="8" fill="rgba(220,53,69,0.1)" stroke="rgba(220,53,69,0.3)" stroke-width="1"/>
+  <text x="50" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#dc3545">🏦 Santander API</text>
+  <text x="50" y="75" font-family="Arial, sans-serif" font-size="10" fill="#ffffff">Java 17 + Spring Boot 3</text>
+  
+  <!-- Endpoints Section -->
+  <text x="40" y="110" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">📋 Endpoints</text>
+  
+  <!-- GET Endpoint -->
+  <rect x="40" y="120" width="150" height="20" rx="4" fill="rgba(40,167,69,0.2)" stroke="rgba(40,167,69,0.5)" stroke-width="1"/>
+  <text x="45" y="132" font-family="monospace" font-size="8" fill="#28a745">GET</text>
+  <text x="70" y="132" font-family="monospace" font-size="8" fill="#ffffff">/users</text>
+  
+  <!-- POST Endpoint -->
+  <rect x="200" y="120" width="150" height="20" rx="4" fill="rgba(255,193,7,0.2)" stroke="rgba(255,193,7,0.5)" stroke-width="1"/>
+  <text x="205" y="132" font-family="monospace" font-size="8" fill="#ffc107">POST</text>
+  <text x="235" y="132" font-family="monospace" font-size="8" fill="#ffffff">/users</text>
+  
+  <!-- PUT Endpoint -->
+  <rect x="40" y="150" width="150" height="20" rx="4" fill="rgba(23,162,184,0.2)" stroke="rgba(23,162,184,0.5)" stroke-width="1"/>
+  <text x="45" y="162" font-family="monospace" font-size="8" fill="#17a2b8">PUT</text>
+  <text x="70" y="162" font-family="monospace" font-size="8" fill="#ffffff">/users/{id}</text>
+  
+  <!-- DELETE Endpoint -->
+  <rect x="200" y="150" width="150" height="20" rx="4" fill="rgba(220,53,69,0.2)" stroke="rgba(220,53,69,0.5)" stroke-width="1"/>
+  <text x="205" y="162" font-family="monospace" font-size="8" fill="#dc3545">DELETE</text>
+  <text x="245" y="162" font-family="monospace" font-size="8" fill="#ffffff">/users/{id}</text>
+  
+  <!-- Database Section -->
+  <rect x="40" y="185" width="310" height="35" rx="6" fill="rgba(108,117,125,0.1)" stroke="rgba(108,117,125,0.3)" stroke-width="1"/>
+  <text x="50" y="200" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#6c757d">🗄️ Database</text>
+  <text x="50" y="212" font-family="Arial, sans-serif" font-size="9" fill="#ffffff">H2 (dev) + PostgreSQL (prod)</text>
+  
+  <!-- Features Icons -->
+  <circle cx="320" cy="195" r="8" fill="rgba(40,167,69,0.3)" stroke="#28a745" stroke-width="1"/>
+  <text x="316" y="199" font-family="Arial, sans-serif" font-size="8" fill="#28a745">✓</text>
+  
+  <circle cx="340" cy="195" r="8" fill="rgba(40,167,69,0.3)" stroke="#28a745" stroke-width="1"/>
+  <text x="336" y="199" font-family="Arial, sans-serif" font-size="8" fill="#28a745">✓</text>
+  
+  <!-- Docker & Deploy Section -->
+  <rect x="40" y="230" width="140" height="25" rx="4" fill="rgba(0,123,255,0.1)" stroke="rgba(0,123,255,0.3)" stroke-width="1"/>
+  <text x="50" y="245" font-family="Arial, sans-serif" font-size="9" fill="#007bff">🐋 Docker Ready</text>
+  
+  <rect x="190" y="230" width="160" height="25" rx="4" fill="rgba(111,66,193,0.1)" stroke="rgba(111,66,193,0.3)" stroke-width="1"/>
+  <text x="200" y="245" font-family="Arial, sans-serif" font-size="9" fill="#6f42c1">🚀 Railway Deploy</text>
+  
+  <!-- Spring Boot Badge -->
+  <ellipse cx="360" cy="50" rx="15" ry="8" fill="rgba(107,183,82,0.2)" stroke="#6bb752" stroke-width="1"/>
+  <text x="352" y="54" font-family="Arial, sans-serif" font-size="7" fill="#6bb752">Spring</text>
+  
+  <!-- Java Badge -->
+  <ellipse cx="360" cy="70" rx="12" ry="8" fill="rgba(237,118,0,0.2)" stroke="#ed7600" stroke-width="1"/>
+  <text x="355" y="74" font-family="Arial, sans-serif" font-size="7" fill="#ed7600">Java</text>
+  
+  <!-- Swagger Documentation Indicator -->
+  <rect x="250" y="40" width="80" height="15" rx="3" fill="rgba(133,189,65,0.2)" stroke="#85bd41" stroke-width="1"/>
+  <text x="255" y="50" font-family="Arial, sans-serif" font-size="8" fill="#85bd41">📚 Swagger</text>
+</svg>

@@ -1,14 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Building, GraduationCap, Briefcase } from 'lucide-react';
+import { Calendar, Building, GraduationCap, Briefcase } from 'lucide-react';
 import { experiences } from '@/data';
+import { Experience } from '@/types';
 
 export default function ExperienciaPage() {
   const workExperiences = experiences.filter(exp => exp.type === 'work');
   const educationExperiences = experiences.filter(exp => exp.type === 'education');
 
-  const ExperienceCard = ({ experience, index }: { experience: any; index: number }) => (
+  const ExperienceCard = ({ experience, index }: { experience: Experience; index: number }) => (
     <motion.div
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
@@ -32,7 +33,7 @@ export default function ExperienciaPage() {
         <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 mt-2 sm:mt-0">
           <Calendar className="w-4 h-4" />
           <span className="text-sm">
-            {experience.startDate} - {experience.endDate || 'Presente'}
+            {experience.startDate} {experience.endDate }
           </span>
         </div>
       </div>
@@ -153,7 +154,7 @@ export default function ExperienciaPage() {
               className="text-center space-y-2"
             >
               <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-                {workExperiences.length}+
+                Mais de 2 
               </div>
               <div className="text-gray-600 dark:text-gray-400">
                 Experiências Profissionais
@@ -167,7 +168,7 @@ export default function ExperienciaPage() {
               className="text-center space-y-2"
             >
               <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-                3+
+                Mais de 2
               </div>
               <div className="text-gray-600 dark:text-gray-400">
                 Anos de Experiência
@@ -181,10 +182,10 @@ export default function ExperienciaPage() {
               className="text-center space-y-2"
             >
               <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-                12+
+                Mais de 10
               </div>
               <div className="text-gray-600 dark:text-gray-400">
-                Tecnologias Dominadas
+                Tecnologias Conhecidas
               </div>
             </motion.div>
           </div>
