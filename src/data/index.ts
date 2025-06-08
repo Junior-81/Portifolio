@@ -7,7 +7,7 @@ export const personalInfo: PersonalInfo = {
   location: 'Recife, PE - Brasil',
   email: 'jab.junior81@gmail.com',
   avatar: '/images/avatar.jpg',
-  resumeUrl: '/resume.pdf'
+  resumeUrl: '/curriculo-ailton-junior.pdf'
 };
 
 export const socialLinks: SocialLink[] = [
