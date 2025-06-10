@@ -85,7 +85,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Image */}
+          {/* Image - Ajustada */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -95,43 +95,55 @@ export default function Hero() {
             <div className="relative">
               <motion.div
                 animate={{ 
-                  scale: [1, 1.05, 1],
-                  rotate: [0, 1, -1, 0] 
+                  scale: [1, 1.02, 1],
+                  rotate: [0, 0.5, -0.5, 0] 
                 }}
                 transition={{ 
                   duration: 6,
                   repeat: Infinity,
                   ease: "easeInOut" 
                 }}
-                className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1"
+                className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1.5"
               >
-                <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 p-2">
+                <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 p-2 overflow-hidden">
                   <Image
                     src={personalInfo.avatar}
                     alt={personalInfo.name}
-                    width={300}
-                    height={300}
-                    className="w-full h-full rounded-full object-cover"
+                    width={400}
+                    height={400}
+                    className="w-full h-full rounded-full object-cover object-top scale-100"
                     priority
                   />
                 </div>
               </motion.div>
               
-              {/* Floating elements */}
+              {/* Floating elements - Ajustados */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 bg-blue-500 rounded-full p-3 shadow-lg"
+                className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-blue-500 rounded-full p-2 sm:p-3 shadow-lg"
               >
-                <span className="text-white text-xl">💻</span>
+                <span className="text-white text-lg sm:text-xl">💻</span>
               </motion.div>
               
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                className="absolute -bottom-4 -left-4 bg-purple-500 rounded-full p-3 shadow-lg"
+                className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-purple-500 rounded-full p-2 sm:p-3 shadow-lg"
               >
-                <span className="text-white text-xl">🚀</span>
+                <span className="text-white text-lg sm:text-xl">🚀</span>
+              </motion.div>
+
+              {/* Elemento adicional de código */}
+              <motion.div
+                animate={{ 
+                  y: [0, -8, 0],
+                  rotate: [0, 5, -5, 0]
+                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                className="absolute top-1/4 -left-6 sm:-left-8 bg-green-500 rounded-full p-2 sm:p-3 shadow-lg"
+              >
+                <span className="text-white text-lg sm:text-xl">⚡</span>
               </motion.div>
             </div>
           </motion.div>
