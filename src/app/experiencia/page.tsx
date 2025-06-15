@@ -168,10 +168,10 @@ export default function ExperienciaPage() {
               className="text-center space-y-2"
             >
               <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-                Mais de 2
+                +2
               </div>
               <div className="text-gray-600 dark:text-gray-400">
-                Anos de Experiência
+                +Experiência
               </div>
             </motion.div>
 
@@ -182,7 +182,7 @@ export default function ExperienciaPage() {
               className="text-center space-y-2"
             >
               <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-                Mais de 10
+                 +10
               </div>
               <div className="text-gray-600 dark:text-gray-400">
                 Tecnologias Conhecidas

@@ -171,12 +171,6 @@ export default function ProjetosPage() {
                       )}
                     </div>
                     
-                    <Link
-                      href={`/projetos/${project.id}`}
-                      className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm font-medium transition-colors"
-                    >
-                      Ver detalhes →
-                    </Link>
                   </div>
                 </div>
               </motion.div>
