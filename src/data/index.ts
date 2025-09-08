@@ -3,7 +3,7 @@ import { PersonalInfo, Project, Experience, Skill, SocialLink } from '@/types';
 export const personalInfo: PersonalInfo = {
   name: 'Ailton Junior',
   title: 'Desenvolvedor Full Stack', 
-  bio: 'Desenvolvedor Full Stack em formação, apaixonado por tecnologia, aprendizado contínuo e desafios. Tenho experiência prática no desenvolvimento e manutenção de sistemas front-end e back-end, sempre focando em performance, usabilidade e boas práticas. Gosto de construir soluções escaláveis, colaborar com equipes e entregar valor real para o usuário. Estou sempre em busca de evoluir e contribuir com projetos inovadores!.',
+  bio: 'Desenvolvedor Full Stack em formação. Tenho experiência prática no desenvolvimento e manutenção de sistemas front-end e back-end, sempre focando em performance, usabilidade e boas práticas. Gosto de construir soluções escaláveis, colaborar com equipes e entregar valor real para o usuário. Estou sempre em busca de evoluir e contribuir com projetos inovadores!.',
   location: 'Recife, PE - Brasil',
   email: 'jab.junior81@gmail.com',
   avatar: '/images/avatar.jpg',
@@ -106,6 +106,18 @@ export const projects: Project[] = [
     year: 2025
   },
   {
+    id: 'kailane-design-portfolio',
+    title: 'Kailane Design - Portfólio Profissional',
+    description: 'Site portfólio para apresentação dos trabalhos e serviços da Kailane Design.',
+    longDescription: 'Aplicação web desenvolvida com Next.js para destacar o portfólio da empresa Kailane Design. O site apresenta projetos realizados, serviços oferecidos, depoimentos de clientes, área de contato e design responsivo. Foco em experiência visual, navegação intuitiva e identidade visual personalizada para a marca.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'EmailJS', 'Vercel'],
+    image: '/images/projects/kailane-design-portfolio.jpeg',
+    demoUrl: 'https://kailanemaria.vercel.app',
+    githubUrl: 'https://github.com/Junior-81/Port_Kailane',
+    featured: true,
+    year: 2025
+},
+  {
     id: 'cryptoboard-dashboard',
     title: 'CryptoBoard - Dashboard de Criptomoedas',
     description: 'Dashboard completo para monitoramento de criptomoedas em tempo real com conversor de moedas e gráficos interativos.',
@@ -117,6 +129,18 @@ export const projects: Project[] = [
     featured: true,
     year: 2025
   }, 
+  {
+  id: 'sec-trab-jaboatao-dashboard',
+  title: 'Secretaria do Trabalho Jaboatão - Portal de Serviços',
+  description: 'Portal completo para gestão e acesso aos serviços da Secretaria de Trabalho de Jaboatão dos Guararapes.',
+  longDescription: 'Aplicação web moderna desenvolvida com Next.js para facilitar o acesso aos serviços da Secretaria de Trabalho de Jaboatão dos Guararapes. O sistema oferece agendamento online, informações institucionais, áreas de atuação, cadastro de empregadores e trabalhadores, além de integração com redes sociais e recursos de acessibilidade. Design responsivo, navegação intuitiva e otimização de performance.(Github fechado por ser projeto da prefeitura)',
+  technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Axios'],
+  image: '/images/projects/trabalho.jpeg',
+  demoUrl: 'https://trabalhoteste.jaboatao.pe.gov.br',
+  githubUrl: '',
+  featured: true,
+  year: 2025
+},
    {
     id: 'nextjs-landing-page',
     title: 'Starter - Landing Page Next.js',
