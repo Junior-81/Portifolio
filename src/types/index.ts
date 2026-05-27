@@ -16,7 +16,7 @@ export interface Experience {
   company: string;
   position: string;
   startDate: string;
-  endDate?: string;
+  endDate?: string | null;
   description: string;
   technologies?: string[];
   type: 'work' | 'education';

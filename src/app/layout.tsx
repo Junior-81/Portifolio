@@ -10,13 +10,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "José Ailton - Desenvolvedor Full Stack",
-  description: "Portfólio pessoal de José Ailton, desenvolvedor full stack especializado em React, Next.js e Node.js.",
-  keywords: ["desenvolvedor", "full stack", "react", "nextjs", "nodejs", "typescript"],
+  title: "Ailton Junior — Backend Engineer | Java & Spring Boot",
+  description:
+    "Desenvolvedor Backend especializado em Java, Spring Boot e PL/SQL. Experiência em sistemas de alta criticidade, microsserviços e governança de APIs REST.",
+  keywords: [
+    "desenvolvedor backend",
+    "java",
+    "spring boot",
+    "pl/sql",
+    "microsserviços",
+    "api rest",
+    "oracle",
+    "recife",
+    "pernambuco",
+  ],
   authors: [{ name: "José Ailton" }],
   openGraph: {
-    title: "José Ailton - Desenvolvedor Full Stack",
-    description: "Portfólio pessoal de José Ailton, desenvolvedor full stack especializado em React, Next.js e Node.js.",
+    title: "Ailton Junior — Backend Engineer",
+    description: "Especialista em Java, Spring Boot e sistemas de alta criticidade.",
+    url: "https://portifolio-mu-khaki.vercel.app",
     type: "website",
     locale: "pt_BR",
   },

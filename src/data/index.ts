@@ -2,12 +2,12 @@ import { PersonalInfo, Project, Experience, Skill, SocialLink } from '@/types';
 
 export const personalInfo: PersonalInfo = {
   name: 'Ailton Junior',
-  title: 'Desenvolvedor Full Stack', 
-  bio: 'Desenvolvedor Full Stack em formação. Tenho experiência prática no desenvolvimento e manutenção de sistemas front-end e back-end, sempre focando em performance, usabilidade e boas práticas. Gosto de construir soluções escaláveis, colaborar com equipes e entregar valor real para o usuário. Estou sempre em busca de evoluir e contribuir com projetos inovadores!.',
+  title: 'Backend Engineer · Java & Spring Boot',
+  bio: 'Desenvolvedor Backend com atuação em produção em dois dos contextos mais exigentes em regras de negócio: HealthTech crítica e gestão pública. Especialista em Java, Spring Boot e PL/SQL, com entrega de microsserviços, APIs REST governadas por OpenAPI e sustentação de sistemas que geram alto impacto. Alia boas práticas consolidadas — SOLID, TDD, design patterns — com visão de produto formada no contato direto com o usuário final.',
   location: 'Recife, PE - Brasil',
   email: 'jab.junior81@gmail.com',
   avatar: '/images/avatar.jpg',
-  resumeUrl: '/curriculo-ailton-junior.pdf'
+  resumeUrl: '/AiltonJunior_Curriculo.pdf'
 };
 
 export const socialLinks: SocialLink[] = [
@@ -51,20 +51,23 @@ export const skills: Skill[] = [
   { name: 'NestJS', level: 'Iniciante', category: 'Backend' },
   { name: 'Python', level: 'Intermediário', category: 'Backend' },
   { name: 'FastAPI', level: 'Iniciante', category: 'Backend' },
-  { name: 'Java', level: 'Intermediário', category: 'Backend' },
-  { name: 'Spring Boot', level: 'Intermediário', category: 'Backend' },
-  { name: 'JPA/Hibernate', level: 'Iniciante', category: 'Backend' },
+  { name: 'Java', level: 'Avançado', category: 'Backend' },
+  { name: 'Spring Boot', level: 'Avançado', category: 'Backend' },
+  { name: 'JPA/Hibernate', level: 'Intermediário', category: 'Backend' },
   { name: 'JDBC/ORM', level: 'Iniciante', category: 'Backend' },
+  { name: 'PL/SQL', level: 'Avançado', category: 'Backend' },
+  { name: 'Spring Security', level: 'Intermediário', category: 'Backend' },
 
   // Database
   { name: 'PostgreSQL', level: 'Intermediário', category: 'Database' },
   { name: 'MySQL', level: 'Intermediário', category: 'Database' },
+  { name: 'Oracle DB', level: 'Intermediário', category: 'Database' },
   { name: 'MongoDB', level: 'Iniciante', category: 'Database' },
   { name: 'Prisma ORM', level: 'Intermediário', category: 'Database' },
   { name: 'SQLAlchemy', level: 'Iniciante', category: 'Database' },
 
   // DevOps & Tools
-  { name: 'Docker', level: 'Iniciante', category: 'DevOps' },
+  { name: 'Docker', level: 'Intermediário', category: 'DevOps' },
   { name: 'AWS', level: 'Iniciante', category: 'DevOps' },
   { name: 'Vercel', level: 'Intermediário', category: 'DevOps' },
   { name: 'Linux', level: 'Iniciante', category: 'DevOps' },
@@ -73,15 +76,28 @@ export const skills: Skill[] = [
   // Outras
   { name: 'Git', level: 'Intermediário', category: 'Outras' },
   { name: 'REST APIs', level: 'Intermediário', category: 'Outras' },
+  { name: 'OpenAPI / Spectral', level: 'Intermediário', category: 'Outras' },
   { name: 'GraphQL', level: 'Iniciante', category: 'Outras' },
   { name: 'JWT', level: 'Intermediário', category: 'Outras' },
-  { name: 'Microservices', level: 'Iniciante', category: 'Outras' },
-  { name: 'TDD', level: 'Iniciante', category: 'Outras' },
+  { name: 'Microservices', level: 'Intermediário', category: 'Outras' },
+  { name: 'TDD', level: 'Intermediário', category: 'Outras' },
+  { name: 'Apache Kafka', level: 'Iniciante', category: 'Outras' },
   { name: 'WebSockets', level: 'Iniciante', category: 'Outras' },
   { name: 'Testes (JUnit, Jest, React Testing Library)', level: 'Iniciante', category: 'Outras' }
 ];
 
 export const projects: Project[] = [
+  {
+    id: 'api-governance-tcc',
+    title: 'Governança de APIs — TCC Bacharelado em CC',
+    description: 'Arquitetura de migração de regras de negócio de banco legado Oracle para ecossistema de APIs modernas com validação de contratos via Spectral.',
+    longDescription: 'Projeto de conclusão de curso focado em um problema real do setor de saúde: regras de negócio críticas presas em banco de dados legado (Oracle). Arquitetou a extração e transição dessas regras para APIs modernas documentadas com OpenAPI 3.0. Implementou pipeline de validação de contratos com Spectral (linting de schemas, versionamento, nomenclatura). Validou que a centralização de regras em APIs versionadas aumenta a segurança das integrações e reduz risco de regressão — tese diretamente aplicável a modernização de sistemas financeiros com múltiplos canais.',
+    technologies: ['Java', 'Spring Boot', 'Oracle DB', 'OpenAPI 3.0', 'Spectral', 'PL/SQL'],
+    image: '/images/projects/api-governance-tcc.svg',
+    githubUrl: 'https://github.com/Junior-81',
+    featured: true,
+    year: 2025
+  },
   {
     id: 'robo-supervisorio',
     title: 'Robô Supervisório - Sistema de Controle AGV',
@@ -189,22 +205,25 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
  {
+  id: 'mv-sistemas-2025',
+  company: 'MV Sistemas — HealthTech',
+  position: 'Desenvolvedor Backend',
+  startDate: 'out 2025',
+  endDate: null,
+  description: `Sustentação e evolução do sistema SOUL MV — núcleo de faturamento hospitalar de alta criticidade, impactando centenas de unidades de saúde com fluxos financeiros regulados pelo padrão TISS. Diagnóstico e correção de falhas em rotinas de extração de dados TISS, reduzindo glosas e garantindo conformidade regulatória. Refatoração de lógicas de valoração em PL/SQL/Oracle, eliminando gargalos em rotinas de fechamento de faturamento.`,
+  technologies: ['Java', 'Spring Boot', 'PL/SQL', 'Oracle DB', 'REST APIs', 'Git'],
+  type: 'work'
+},
+ {
   id: 'fullstack-dev-2024',
   company: 'Prefeitura Municipal de Jaboatão dos Guararapes',
-  position: 'Desenvolvedor Full Stack',
-  startDate: '2025 - Atual',
-  description: `Atuação abrangente em desenvolvimento full stack, englobando experiências sólidas em front-end e back-end, além de integração de sistemas e colaboração com equipes multidisciplinares. No front-end, trabalhei com sustentação e evolução de sistemas utilizando TypeScript, JavaScript, HTML, CSS e GitHub, focando em performance, usabilidade e manutenção de aplicações legadas. Fui responsável por implementar melhorias, arquitetar componentes e realizar integrações com APIs REST, além de contribuir em code reviews, versionamento e boas práticas de desenvolvimento.
-
-No back-end, participei de projetos de sustentação e desenvolvimento de sistemas utilizando Java, Spring Boot, Spring Data JPA, além de implementação e manutenção de APIs REST, integração com bancos de dados relacionais (MySQL, PostgreSQL), criação de consultas SQL, mapeamentos relacionais e aplicação de padrões de arquitetura como SOLID e Clean Code. Apoiei ainda a documentação técnica e a equipe em processos de integração.
-
-O contato contínuo com times de suporte e infraestrutura me proporcionou uma visão completa do ciclo de vida das aplicações, desde o desenvolvimento até o monitoramento, análise de incidentes e melhorias contínuas nos ambientes corporativos.
-
-Principais tecnologias: Java, Spring Boot, JPA, SQL, JavaScript, TypeScript, HTML, CSS, Git, PostgreSQL, MySQL.
-`,
+  position: 'Desenvolvedor Backend',
+  startDate: 'mai 2025',
+  endDate: 'out 2025',
+  description: `Atuação em sustentação e evolução de serviços back-end para sistemas da administração pública, com foco em Java e Spring Boot. Implementação e manutenção de APIs REST, integração com bancos relacionais (MySQL e PostgreSQL), otimização de consultas SQL e mapeamentos com JPA. Aplicação de SOLID e boas práticas de arquitetura para aumentar estabilidade, legibilidade e previsibilidade de deploy em ambiente de produção.`,
   technologies: [
     'Java', 'Spring Boot', 'Spring Data JPA', 'SQL',
-    'JavaScript', 'TypeScript', 'HTML', 'CSS',
-     'Docker', 'PostgreSQL', 'MySQL',
+    'Docker', 'PostgreSQL', 'MySQL',
     'Git'
   ],
   type: 'work'

@@ -7,10 +7,16 @@ import { personalInfo, skills, experiences } from '@/data';
 import SkillsSection from '@/components/SkillsSection';
 
 export default function SobrePage() {
+  const orderedExperiences = [...experiences].sort((a, b) => {
+    if (a.id === 'mv-sistemas-2025') return -1;
+    if (b.id === 'mv-sistemas-2025') return 1;
+    return 0;
+  });
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <section className="py-20 bg-linear-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -64,7 +70,7 @@ export default function SobrePage() {
               className="flex justify-center lg:justify-end"
             >
               <div className="relative">
-                <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-blue-400 to-purple-600 p-1">
+                <div className="w-80 h-80 rounded-2xl bg-linear-to-br from-blue-400 to-purple-600 p-1">
                   <div className="w-full h-full rounded-2xl bg-white dark:bg-gray-800 p-2">
                     <Image
                       src={personalInfo.avatar}
@@ -81,6 +87,45 @@ export default function SobrePage() {
         </div>
       </section>
 
+      {/* Differentials Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-8"
+          >
+            <div className="text-center space-y-3">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+                Diferenciais
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                Contexto real de produção, visão completa de operação e foco em modernização de sistemas críticos.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              {[
+                '🏥 Único contexto de complexidade de negócio equivalente ao financeiro: faturamento TISS regula transações de saúde com a mesma rigidez que o BCB regula pagamentos.',
+                '🔍 Visão 360°: formado no suporte de infraestrutura (Zabbix, RCA, SLA) antes de ir para o desenvolvimento — entendo produção de ponta a ponta.',
+                '📐 TCC em Governança de APIs: migração de regras de negócio de bancos legados Oracle para APIs modernas — tema central em modernização bancária.'
+              ].map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="rounded-xl p-5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm"
+                >
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Skills Section */}
       <SkillsSection skills={skills} />
 
@@ -94,7 +139,7 @@ export default function SobrePage() {
             className="text-center space-y-4 mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
-              Minha Jornada
+              Trajetória Profissional
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               Um pouco sobre minha trajetória profissional e acadêmica
@@ -102,7 +147,7 @@ export default function SobrePage() {
           </motion.div>
 
           <div className="space-y-8">
-            {experiences.map((experience, index) => (
+            {orderedExperiences.map((experience, index) => (
               <motion.div
                 key={experience.id}
                 initial={{ opacity: 0, y: 50 }}
