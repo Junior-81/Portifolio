@@ -8,7 +8,7 @@ import { personalInfo } from '@/data';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <section className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -23,16 +23,16 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-blue-600 dark:text-blue-400 font-medium"
+                className="text-blue-700 dark:text-blue-400 font-medium"
               >
-                Olá, eu sou
+                Backend Developer
               </motion.div>
               
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white"
+                className="text-4xl sm:text-6xl font-bold tracking-tight text-gray-950 dark:text-white"
               >
                 {personalInfo.name}
               </motion.h1>
@@ -41,7 +41,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 font-medium"
+                className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 font-medium"
               >
                 {personalInfo.title}
               </motion.div>
@@ -50,7 +50,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl"
+                className="text-lg leading-8 text-gray-600 dark:text-gray-400 max-w-2xl"
               >
                 {personalInfo.bio}
               </motion.p>
@@ -85,7 +85,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Image - Ajustada */}
+            {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -103,7 +103,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut" 
                 }}
-                className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1.5"
+                className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gray-900 dark:bg-gray-100 p-1.5"
               >
                 <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 p-2 overflow-hidden">
                   <Image
@@ -115,35 +115,6 @@ export default function Hero() {
                     priority
                   />
                 </div>
-              </motion.div>
-              
-              {/* Floating elements - Ajustados */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-blue-500 rounded-full p-2 sm:p-3 shadow-lg"
-              >
-                <span className="text-white text-lg sm:text-xl">💻</span>
-              </motion.div>
-              
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-purple-500 rounded-full p-2 sm:p-3 shadow-lg"
-              >
-                <span className="text-white text-lg sm:text-xl">🚀</span>
-              </motion.div>
-
-              {/* Elemento adicional de código */}
-              <motion.div
-                animate={{ 
-                  y: [0, -8, 0],
-                  rotate: [0, 5, -5, 0]
-                }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute top-1/4 -left-6 sm:-left-8 bg-green-500 rounded-full p-2 sm:p-3 shadow-lg"
-              >
-                <span className="text-white text-lg sm:text-xl">⚡</span>
               </motion.div>
             </div>
           </motion.div>

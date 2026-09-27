@@ -6,23 +6,29 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github, Filter } from 'lucide-react';
 import { projects } from '@/data';
 
-export default function ProjetosPage() {
-  const [selectedTech, setSelectedTech] = useState<string>('');
-  
-  // Extrair todas as tecnologias únicas
-  const allTechs = Array.from(
-    new Set(projects.flatMap(project => project.technologies))
-  ).sort();
+const projectFilters = [
+  { id: '', label: 'Todos', technologies: [] },
+  { id: 'backend', label: 'Backend', technologies: ['Java', 'Spring Boot', 'Node.js', 'Express.js', 'TypeScript'] },
+  { id: 'apis', label: 'APIs e Governança', technologies: ['REST APIs', 'OpenAPI 3.0', 'Spectral', 'Swagger/OpenAPI', 'JWT'] },
+  { id: 'dados', label: 'Dados', technologies: ['PostgreSQL', 'MySQL', 'Oracle DB', 'PL/SQL', 'H2 Database'] },
+  { id: 'integracoes', label: 'Integrações', technologies: ['MQTT', 'Node-RED', 'CoinGecko API', 'Axios'] },
+  { id: 'frontend', label: 'Frontend', technologies: ['Next.js', 'React', 'Tailwind CSS'] },
+];
 
-  // Filtrar projetos por tecnologia
-  const filteredProjects = selectedTech 
-    ? projects.filter(project => project.technologies.includes(selectedTech))
+export default function ProjetosPage() {
+  const [selectedFilter, setSelectedFilter] = useState<string>('');
+
+  const activeFilter = projectFilters.find(filter => filter.id === selectedFilter) || projectFilters[0];
+  const filteredProjects = activeFilter.technologies.length
+    ? projects.filter(project =>
+        project.technologies.some(tech => activeFilter.technologies.includes(tech))
+      )
     : projects;
 
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <section className="py-20 bg-white dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -34,44 +40,34 @@ export default function ProjetosPage() {
               Meus Projetos
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Uma coleção dos meus trabalhos mais significativos, divirta-se!.
+              Projetos selecionados para mostrar backend, contratos de API, bancos de dados,
+              integrações e decisões de arquitetura.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Filters Section */}
-      <section className="py-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+      <section className="py-6 bg-gray-50 dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+          <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
               <Filter className="w-5 h-5" />
-              <span className="font-medium">Filtrar por tecnologia:</span>
+              <span className="font-medium">Filtrar por foco:</span>
             </div>
             
             <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => setSelectedTech('')}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedTech === ''
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
-                }`}
-              >
-                Todos
-              </button>
-              
-              {allTechs.map((tech) => (
+              {projectFilters.map((filter) => (
                 <button
-                  key={tech}
-                  onClick={() => setSelectedTech(tech)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    selectedTech === tech
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  key={filter.id || 'all'}
+                  onClick={() => setSelectedFilter(filter.id)}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                    selectedFilter === filter.id
+                      ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
+                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500'
                   }`}
                 >
-                  {tech}
+                  {filter.label}
                 </button>
               ))}
             </div>
@@ -94,7 +90,7 @@ export default function ProjetosPage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group"
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -108,7 +104,7 @@ export default function ProjetosPage() {
                     {project.year}
                   </div>
                   {project.featured && (
-                    <div className="absolute top-4 left-4 bg-yellow-500 text-white rounded-full px-3 py-1 text-xs font-medium">
+                    <div className="absolute top-4 left-4 bg-gray-900/90 text-white rounded-md px-3 py-1 text-xs font-medium">
                       Destaque
                     </div>
                   )}
@@ -128,17 +124,13 @@ export default function ProjetosPage() {
                     {project.technologies.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
-                          selectedTech === tech
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300'
-                        }`}
+                        className="px-2.5 py-1 text-xs font-medium rounded-md bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 3 && (
-                      <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-medium rounded-full">
+                      <span className="px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-medium rounded-md">
                         +{project.technologies.length - 3} mais
                       </span>
                     )}

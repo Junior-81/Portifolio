@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ailton Junior — Backend Engineer | Java & Spring Boot",
+  title: "Ailton Junior — Desenvolvedor Backend Jr | Java & Spring Boot",
   description:
-    "Desenvolvedor Backend especializado em Java, Spring Boot e PL/SQL. Experiência em sistemas de alta criticidade, microsserviços e governança de APIs REST.",
+    "Desenvolvedor Backend Jr com foco em Java, Spring Boot, PL/SQL, bancos relacionais, sistemas críticos e governança de APIs REST.",
   keywords: [
     "desenvolvedor backend",
     "java",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "José Ailton" }],
   openGraph: {
-    title: "Ailton Junior — Backend Engineer",
-    description: "Especialista em Java, Spring Boot e sistemas de alta criticidade.",
+    title: "Ailton Junior — Desenvolvedor Backend Jr",
+    description: "Java, Spring Boot, PL/SQL, sistemas críticos e governança de APIs.",
     url: "https://portifolio-mu-khaki.vercel.app",
     type: "website",
     locale: "pt_BR",

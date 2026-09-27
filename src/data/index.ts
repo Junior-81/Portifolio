@@ -2,11 +2,11 @@ import { PersonalInfo, Project, Experience, Skill, SocialLink } from '@/types';
 
 export const personalInfo: PersonalInfo = {
   name: 'Ailton Junior',
-  title: 'Backend Engineer · Java & Spring Boot',
-  bio: 'Desenvolvedor Backend com atuação em produção em dois dos contextos mais exigentes em regras de negócio: HealthTech crítica e gestão pública. Especialista em Java, Spring Boot e PL/SQL, com entrega de microsserviços, APIs REST governadas por OpenAPI e sustentação de sistemas que geram alto impacto. Alia boas práticas consolidadas — SOLID, TDD, design patterns — com visão de produto formada no contato direto com o usuário final.',
+  title: 'Desenvolvedor Backend Jr · Java, Spring Boot e APIs',
+  bio: 'Desenvolvedor Backend com experiência em sistemas de produção para HealthTech e gestão pública. Atuo com Java, Spring Boot, PL/SQL, bancos relacionais e APIs REST, com atenção a regras de negócio críticas, contratos bem definidos, qualidade de código e sustentação de sistemas em ambiente real. Minha trajetória combina suporte, operação e desenvolvimento, base que direciona minha evolução para arquitetura de software.',
   location: 'Recife, PE - Brasil',
   email: 'jab.junior81@gmail.com',
-  avatar: '/images/avatar.jpg',
+  avatar: '/images/Avatar.jpeg',
   resumeUrl: '/AiltonJunior_Curriculo.pdf'
 };
 
@@ -34,69 +34,49 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const skills: Skill[] = [
-  // Frontend
-  { name: 'React', level: 'Intermediário', category: 'Frontend' },
-  { name: 'Next.js', level: 'Intermediário', category: 'Frontend' },
-  { name: 'TypeScript', level: 'Intermediário', category: 'Frontend' },
-  { name: 'JavaScript', level: 'Avançado', category: 'Frontend' },
-  { name: 'HTML5', level: 'Avançado', category: 'Frontend' },
-  { name: 'CSS3', level: 'Intermediário', category: 'Frontend' },
-  { name: 'Tailwind CSS', level: 'Intermediário', category: 'Frontend' },
-  { name: 'Bootstrap', level: 'Intermediário', category: 'Frontend' },
-  { name: 'Sass/SCSS', level: 'Iniciante', category: 'Frontend' },
-
-  // Backend
-  { name: 'Node.js', level: 'Intermediário', category: 'Backend' },
-  { name: 'Express.js', level: 'Intermediário', category: 'Backend' },
-  { name: 'NestJS', level: 'Iniciante', category: 'Backend' },
-  { name: 'Python', level: 'Intermediário', category: 'Backend' },
-  { name: 'FastAPI', level: 'Iniciante', category: 'Backend' },
   { name: 'Java', level: 'Avançado', category: 'Backend' },
   { name: 'Spring Boot', level: 'Avançado', category: 'Backend' },
   { name: 'JPA/Hibernate', level: 'Intermediário', category: 'Backend' },
-  { name: 'JDBC/ORM', level: 'Iniciante', category: 'Backend' },
   { name: 'PL/SQL', level: 'Avançado', category: 'Backend' },
   { name: 'Spring Security', level: 'Intermediário', category: 'Backend' },
+  { name: 'Node.js', level: 'Intermediário', category: 'Backend' },
+  { name: 'Express.js', level: 'Intermediário', category: 'Backend' },
+  { name: 'TypeScript', level: 'Intermediário', category: 'Backend' },
 
-  // Database
   { name: 'PostgreSQL', level: 'Intermediário', category: 'Database' },
   { name: 'MySQL', level: 'Intermediário', category: 'Database' },
   { name: 'Oracle DB', level: 'Intermediário', category: 'Database' },
-  { name: 'MongoDB', level: 'Iniciante', category: 'Database' },
-  { name: 'Prisma ORM', level: 'Intermediário', category: 'Database' },
-  { name: 'SQLAlchemy', level: 'Iniciante', category: 'Database' },
 
-  // DevOps & Tools
   { name: 'Docker', level: 'Intermediário', category: 'DevOps' },
-  { name: 'AWS', level: 'Iniciante', category: 'DevOps' },
-  { name: 'Vercel', level: 'Intermediário', category: 'DevOps' },
-  { name: 'Linux', level: 'Iniciante', category: 'DevOps' },
   { name: 'GitHub Actions', level: 'Intermediário', category: 'DevOps' },
+  { name: 'Linux', level: 'Iniciante', category: 'DevOps' },
+  { name: 'Zabbix', level: 'Intermediário', category: 'DevOps' },
 
-  // Outras
   { name: 'Git', level: 'Intermediário', category: 'Outras' },
   { name: 'REST APIs', level: 'Intermediário', category: 'Outras' },
   { name: 'OpenAPI / Spectral', level: 'Intermediário', category: 'Outras' },
-  { name: 'GraphQL', level: 'Iniciante', category: 'Outras' },
   { name: 'JWT', level: 'Intermediário', category: 'Outras' },
-  { name: 'Microservices', level: 'Intermediário', category: 'Outras' },
+  { name: 'Microservices', level: 'Iniciante', category: 'Outras' },
   { name: 'TDD', level: 'Intermediário', category: 'Outras' },
   { name: 'Apache Kafka', level: 'Iniciante', category: 'Outras' },
-  { name: 'WebSockets', level: 'Iniciante', category: 'Outras' },
-  { name: 'Testes (JUnit, Jest, React Testing Library)', level: 'Iniciante', category: 'Outras' }
+  { name: 'JUnit / Jest', level: 'Iniciante', category: 'Outras' },
+
+  { name: 'React', level: 'Intermediário', category: 'Frontend' },
+  { name: 'Next.js', level: 'Intermediário', category: 'Frontend' },
+  { name: 'Tailwind CSS', level: 'Intermediário', category: 'Frontend' }
 ];
 
 export const projects: Project[] = [
   {
     id: 'api-governance-tcc',
-    title: 'Governança de APIs — TCC Bacharelado em CC',
-    description: 'Arquitetura de migração de regras de negócio de banco legado Oracle para ecossistema de APIs modernas com validação de contratos via Spectral.',
-    longDescription: 'Projeto de conclusão de curso focado em um problema real do setor de saúde: regras de negócio críticas presas em banco de dados legado (Oracle). Arquitetou a extração e transição dessas regras para APIs modernas documentadas com OpenAPI 3.0. Implementou pipeline de validação de contratos com Spectral (linting de schemas, versionamento, nomenclatura). Validou que a centralização de regras em APIs versionadas aumenta a segurança das integrações e reduz risco de regressão — tese diretamente aplicável a modernização de sistemas financeiros com múltiplos canais.',
-    technologies: ['Java', 'Spring Boot', 'Oracle DB', 'OpenAPI 3.0', 'Spectral', 'PL/SQL'],
+    title: 'TCC - Plataforma de APIs Governadas',
+    description: 'Camada anticorrupção entre frontend e legado, com API-First, OpenAPI, Spectral, JWT, LGPD e testes automatizados.',
+    longDescription: 'Prova de conceito do TCC em Ciência da Computação sobre estratégia de plataforma de APIs. O projeto demonstra como uma camada intermediária pode isolar consumidores modernos de regras presas ao banco, expondo contratos REST governados por OpenAPI e validados com Spectral no build. Implementa backend Express com TypeScript, PostgreSQL com PL/pgSQL, autenticação JWT, mascaramento de CPF para reduzir exposição de dados sensíveis e testes automatizados com Jest.',
+    technologies: ['TypeScript', 'Express.js', 'PostgreSQL', 'OpenAPI 3.0', 'Spectral', 'JWT', 'Jest'],
     image: '/images/projects/api-governance-tcc.svg',
-    githubUrl: 'https://github.com/Junior-81',
+    githubUrl: 'https://github.com/Junior-81/TCC-PROJETO',
     featured: true,
-    year: 2025
+    year: 2026
   },
   {
     id: 'robo-supervisorio',
@@ -130,7 +110,7 @@ export const projects: Project[] = [
     image: '/images/projects/kailane-design-portfolio.jpeg',
     demoUrl: 'https://kailanemaria.vercel.app',
     githubUrl: 'https://github.com/Junior-81/Port_Kailane',
-    featured: true,
+    featured: false,
     year: 2025
 },
   {
@@ -142,14 +122,14 @@ export const projects: Project[] = [
     image: '/images/projects/cryptoboard-dashboard.jpg',
     demoUrl: 'https://projeto-dash-bord-crip-20.vercel.app',
     githubUrl: 'https://github.com/Junior-81/Projeto_DashBord_Crip',
-    featured: true,
+    featured: false,
     year: 2025
   }, 
   {
   id: 'sec-trab-jaboatao-dashboard',
   title: 'Secretaria do Trabalho Jaboatão - Portal de Serviços',
   description: 'Portal completo para gestão e acesso aos serviços da Secretaria de Trabalho de Jaboatão dos Guararapes.',
-  longDescription: 'Aplicação web moderna desenvolvida com Next.js para facilitar o acesso aos serviços da Secretaria de Trabalho de Jaboatão dos Guararapes. O sistema oferece agendamento online, informações institucionais, áreas de atuação, cadastro de empregadores e trabalhadores, além de integração com redes sociais e recursos de acessibilidade. Design responsivo, navegação intuitiva e otimização de performance.(Github fechado por ser projeto da prefeitura)',
+  longDescription: 'Aplicação web desenvolvida para facilitar o acesso aos serviços da Secretaria de Trabalho de Jaboatão dos Guararapes. O sistema oferece agendamento online, informações institucionais, cadastro de empregadores e trabalhadores, integração com redes sociais e recursos de acessibilidade. Código-fonte fechado por ser projeto institucional.',
   technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Axios'],
   image: '/images/projects/trabalho.jpeg',
   demoUrl: 'https://trabalhoteste.jaboatao.pe.gov.br',
@@ -207,10 +187,10 @@ export const experiences: Experience[] = [
  {
   id: 'mv-sistemas-2025',
   company: 'MV Sistemas — HealthTech',
-  position: 'Desenvolvedor Backend',
+  position: 'Desenvolvedor Backend Jr',
   startDate: 'out 2025',
   endDate: null,
-  description: `Sustentação e evolução do sistema SOUL MV — núcleo de faturamento hospitalar de alta criticidade, impactando centenas de unidades de saúde com fluxos financeiros regulados pelo padrão TISS. Diagnóstico e correção de falhas em rotinas de extração de dados TISS, reduzindo glosas e garantindo conformidade regulatória. Refatoração de lógicas de valoração em PL/SQL/Oracle, eliminando gargalos em rotinas de fechamento de faturamento.`,
+  description: `Atuação na sustentação e evolução do SOUL MV, sistema de alta criticidade para faturamento hospitalar. Trabalho com Java, PL/SQL e Oracle em rotinas ligadas ao padrão TISS, diagnóstico de falhas, análise de regras de negócio e melhoria de consultas e fluxos backend que impactam operações reais em unidades de saúde.`,
   technologies: ['Java', 'Spring Boot', 'PL/SQL', 'Oracle DB', 'REST APIs', 'Git'],
   type: 'work'
 },
@@ -220,7 +200,7 @@ export const experiences: Experience[] = [
   position: 'Desenvolvedor Backend',
   startDate: 'mai 2025',
   endDate: 'out 2025',
-  description: `Atuação em sustentação e evolução de serviços back-end para sistemas da administração pública, com foco em Java e Spring Boot. Implementação e manutenção de APIs REST, integração com bancos relacionais (MySQL e PostgreSQL), otimização de consultas SQL e mapeamentos com JPA. Aplicação de SOLID e boas práticas de arquitetura para aumentar estabilidade, legibilidade e previsibilidade de deploy em ambiente de produção.`,
+  description: `Desenvolvimento e manutenção de serviços backend para sistemas da administração pública, com Java, Spring Boot, APIs REST, JPA e bancos relacionais. Atuei na evolução de módulos, melhoria de consultas, integração com frontend e organização de código em componentes mais previsíveis para manutenção e deploy.`,
   technologies: [
     'Java', 'Spring Boot', 'Spring Data JPA', 'SQL',
     'Docker', 'PostgreSQL', 'MySQL',
@@ -231,9 +211,10 @@ export const experiences: Experience[] = [
   {
   id: 'support-ti-2024',
   company: 'Prefeitura Municipal de Jaboatão dos Guararapes',
-  position: 'Suporte de TI',
-  startDate: '2024 - 2025',
-  description: `Experiência sólida em suporte técnico, com ênfase no gerenciamento de chamados via GLPI, monitoramento de infraestrutura utilizando Zabbix e análise de causa raiz (RCA) para resolução de problemas recorrentes. Responsável por garantir o atendimento dentro do SLA, documentar soluções técnicas e integrar ferramentas de monitoramento e atendimento. Atuação voltada para estabilidade, eficiência operacional e suporte a times de desenvolvimento e usuários finais.`,
+  position: 'Analista de Suporte de TI / Infra',
+  startDate: 'fev 2024',
+  endDate: 'fev 2025',
+  description: `Atuação em suporte técnico, monitoramento e operação de sistemas municipais. Gerenciei chamados via GLPI, acompanhei ambientes com Zabbix, documentei soluções e participei de análises de causa raiz para incidentes recorrentes. Essa base operacional fortaleceu minha visão de produção, estabilidade e impacto real no usuário final.`,
   technologies: [
     'GLPI', 'Zabbix', 'Monitoramento de Infraestrutura', 'Atendimento ao Usuário', 'Documentação Técnica'
   ],

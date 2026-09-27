@@ -33,7 +33,7 @@ export default function ExperienciaPage() {
         <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 mt-2 sm:mt-0">
           <Calendar className="w-4 h-4" />
           <span className="text-sm">
-            {experience.startDate} {experience.endDate }
+            {experience.startDate} - {experience.endDate || 'Presente'}
           </span>
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function ExperienciaPage() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <section className="py-20 bg-white dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -72,8 +72,8 @@ export default function ExperienciaPage() {
               Experiência & Formação
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Minha trajetória profissional e acadêmica, destacando as experiências 
-              que moldaram minha carreira como desenvolvedor.
+              Minha trajetória profissional e acadêmica, com foco em backend,
+              produção e sistemas de negócio.
             </p>
           </motion.div>
         </div>
@@ -95,7 +95,7 @@ export default function ExperienciaPage() {
               </h2>
             </div>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Principais posições e conquistas na minha carreira
+              Experiências que conectam suporte, operação e desenvolvimento backend.
             </p>
           </motion.div>
 
@@ -154,10 +154,10 @@ export default function ExperienciaPage() {
               className="text-center space-y-2"
             >
               <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-                Mais de 2 
+                3
               </div>
               <div className="text-gray-600 dark:text-gray-400">
-                Experiências Profissionais
+                Experiências em tecnologia
               </div>
             </motion.div>
 
@@ -168,10 +168,10 @@ export default function ExperienciaPage() {
               className="text-center space-y-2"
             >
               <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-                +2
+                2
               </div>
               <div className="text-gray-600 dark:text-gray-400">
-                +Experiência
+                Contextos de produção
               </div>
             </motion.div>
 
@@ -182,10 +182,10 @@ export default function ExperienciaPage() {
               className="text-center space-y-2"
             >
               <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-                 +10
+                20+
               </div>
               <div className="text-gray-600 dark:text-gray-400">
-                Tecnologias Conhecidas
+                Tecnologias e práticas
               </div>
             </motion.div>
           </div>

@@ -23,8 +23,8 @@ export default function Footer() {
               José Ailton
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Desenvolvedor Full Stack, onde coleciono, criar soluções inovadoras 
-              e experiências digitais excepcionais.
+              Desenvolvedor Backend Jr focado em Java, Spring Boot, bancos relacionais
+              e arquitetura de APIs.
             </p>
           </div>
 

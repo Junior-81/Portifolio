@@ -1,0 +1,30 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#0F172A"/>
+  <rect x="80" y="84" width="1040" height="592" rx="28" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <rect x="128" y="138" width="246" height="484" rx="18" fill="#F8FAFC"/>
+  <rect x="477" y="138" width="246" height="484" rx="18" fill="#F8FAFC"/>
+  <rect x="826" y="138" width="246" height="484" rx="18" fill="#F8FAFC"/>
+  <text x="251" y="205" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A">Frontend</text>
+  <text x="600" y="205" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A">API Platform</text>
+  <text x="949" y="205" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A">Legado</text>
+  <rect x="170" y="266" width="162" height="54" rx="10" fill="#E0F2FE"/>
+  <rect x="170" y="346" width="162" height="54" rx="10" fill="#DBEAFE"/>
+  <rect x="519" y="262" width="162" height="54" rx="10" fill="#DCFCE7"/>
+  <rect x="519" y="342" width="162" height="54" rx="10" fill="#E0E7FF"/>
+  <rect x="519" y="422" width="162" height="54" rx="10" fill="#FEF3C7"/>
+  <rect x="868" y="266" width="162" height="54" rx="10" fill="#FEE2E2"/>
+  <rect x="868" y="346" width="162" height="54" rx="10" fill="#FFEDD5"/>
+  <text x="251" y="301" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600" fill="#075985">React</text>
+  <text x="251" y="381" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600" fill="#1D4ED8">HTTP only</text>
+  <text x="600" y="297" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600" fill="#166534">OpenAPI</text>
+  <text x="600" y="377" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600" fill="#3730A3">Spectral</text>
+  <text x="600" y="457" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600" fill="#92400E">JWT + LGPD</text>
+  <text x="949" y="301" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600" fill="#991B1B">PostgreSQL</text>
+  <text x="949" y="381" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600" fill="#9A3412">PL/pgSQL</text>
+  <path d="M392 380H459" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M459 380L439 360M459 380L439 400" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M741 380H808" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M808 380L788 360M808 380L788 400" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+  <text x="600" y="566" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#0F172A">Camada anticorrupção para APIs governadas</text>
+  <text x="600" y="598" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">Contrato como codigo, seguranca e isolamento de regras legadas</text>
+</svg>

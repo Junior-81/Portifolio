@@ -5,27 +5,27 @@ import { Server, GitBranch, Database, Shield } from 'lucide-react';
 
 const specialties = [
   {
-    title: 'Sistemas de Alta Criticidade',
+    title: 'Sistemas Críticos',
     description:
-      'Experiência em produção com faturamento hospitalar regulado (TISS) e sistemas de gestão pública. Onde indisponibilidade tem custo financeiro real.',
+      'Experiência em produção com faturamento hospitalar, padrão TISS e sistemas públicos, com foco em estabilidade e impacto operacional.',
     icon: Server
   },
   {
     title: 'Arquitetura de APIs',
     description:
-      'Design de APIs REST governadas por contrato com OpenAPI e validação via Spectral. Microsserviços desacoplados com Spring Boot 3.',
+      'APIs REST com contratos claros, OpenAPI, validação automatizada e separação entre camadas de entrada, domínio e persistência.',
     icon: GitBranch
   },
   {
     title: 'Banco de Dados Complexo',
     description:
-      'PL/SQL e Oracle DB em sistemas legados de alta volumetria. PostgreSQL e MySQL com modelagem relacional orientada a integridade transacional.',
+      'PL/SQL, Oracle, PostgreSQL e MySQL em regras de negócio, consultas críticas e modelagem relacional orientada à consistência.',
     icon: Database
   },
   {
     title: 'Qualidade & Resiliência',
     description:
-      'SOLID, design patterns, TDD com JUnit e análise de causa raiz (RCA) em incidentes de produção. Código que aguenta o ambiente real.',
+      'SOLID, design patterns, testes, code review e análise de causa raiz aplicados a sistemas que precisam ser mantidos em produção.',
     icon: Shield
   }
 ];
@@ -44,7 +44,7 @@ export default function SpecialtiesSection() {
             Especialidades
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Base técnica construída em ambientes reais, com alto impacto operacional e forte exigência de confiabilidade.
+            Base técnica construída em ambientes reais, com regras de negócio críticas e exigência de confiabilidade.
           </p>
         </motion.div>
 

@@ -16,7 +16,7 @@ export default function SobrePage() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-linear-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <section className="py-20 bg-white dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -101,22 +101,22 @@ export default function SobrePage() {
                 Diferenciais
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                Contexto real de produção, visão completa de operação e foco em modernização de sistemas críticos.
+                Contexto real de produção, visão operacional e foco em backend para sistemas críticos.
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               {[
-                '🏥 Único contexto de complexidade de negócio equivalente ao financeiro: faturamento TISS regula transações de saúde com a mesma rigidez que o BCB regula pagamentos.',
-                '🔍 Visão 360°: formado no suporte de infraestrutura (Zabbix, RCA, SLA) antes de ir para o desenvolvimento — entendo produção de ponta a ponta.',
-                '📐 TCC em Governança de APIs: migração de regras de negócio de bancos legados Oracle para APIs modernas — tema central em modernização bancária.'
+                'Experiência com faturamento hospitalar, padrão TISS e regras de negócio que exigem consistência, rastreabilidade e cuidado com dados sensíveis.',
+                'Base construída também em suporte e infraestrutura, com GLPI, Zabbix, SLA e análise de causa raiz antes da transição para desenvolvimento backend.',
+                'TCC aplicado à governança de APIs, camada anticorrupção, OpenAPI, Spectral e modernização de integrações com sistemas legados.'
               ].map((item, index) => (
                 <motion.div
                   key={item}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="rounded-xl p-5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm"
+                  className="rounded-lg p-5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm"
                 >
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item}</p>
                 </motion.div>

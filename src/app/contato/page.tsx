@@ -350,12 +350,12 @@ export default function ContatoPage() {
                 {submitStatus === 'success' && (
                   <div className="p-4 bg-green-100 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-lg">
                     <p className="text-green-800 dark:text-green-300 text-sm">
-                      ✅ Mensagem enviada com sucesso! Entrarei em contato em breve.
+                      Mensagem enviada com sucesso. Entrarei em contato em breve.
                     </p>
                     {(!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 
                       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID === 'service_portfolio') && (
                       <p className="text-green-700 dark:text-green-400 text-xs mt-2">
-                        ℹ️ EmailJS ainda não está configurado. Dados salvos localmente para demonstração.
+                        EmailJS ainda não está configurado. Dados mantidos apenas para demonstração.
                       </p>
                     )}
                   </div>
@@ -364,10 +364,10 @@ export default function ContatoPage() {
                 {submitStatus === 'error' && (
                   <div className="p-4 bg-red-100 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg">
                     <p className="text-red-800 dark:text-red-300 text-sm">
-                      ❌ Erro ao enviar mensagem. Tente novamente ou use outro meio de contato.
+                      Erro ao enviar mensagem. Tente novamente ou use outro meio de contato.
                     </p>
                     <p className="text-red-700 dark:text-red-400 text-xs mt-2">
-                      💡 Consulte o arquivo EMAILJS_SETUP.md para configurar o envio de emails.
+                      Configure o EmailJS para habilitar o envio real de emails.
                     </p>
                   </div>
                 )}

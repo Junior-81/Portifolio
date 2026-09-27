@@ -1,28 +1,47 @@
+# Portfólio - Ailton Junior
 
-Bem-vindo ao meu portfólio! 🚀
+Portfólio profissional de Ailton Junior, Desenvolvedor Backend Jr com foco em Java, Spring Boot, PL/SQL, bancos relacionais, APIs REST e evolução para arquitetura de software.
 
-Sou apaixonado por tecnologia, inovação e desenvolvimento de soluções que realmente fazem a diferença. Neste espaço, compartilho meus principais projetos, habilidades e conquistas como desenvolvedor, com foco em TypeScript, JavaScript e CSS.
+O site apresenta experiência profissional, projetos selecionados e contato, com destaque para atuação em HealthTech, gestão pública e projetos de governança de APIs.
 
-## 🛠️ Tecnologias & Ferramentas
+## Stack
 
-- **Linguagens:** TypeScript, JavaScript, CSS
-- **Frameworks:** React, Next.js (adapte se necessário)
-- **Ferramentas:** Git, Figma, VSCode, APIs RESTful
-- **Outros:** Metodologias Ágeis, UI/UX Design
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- EmailJS
 
-## 🌟 Diferenciais
+## Foco do Portfólio
 
-- Código limpo e boas práticas de desenvolvimento
-- Foco em experiência do usuário e acessibilidade
-- Entrega de projetos com qualidade e agilidade
-- Aprendizado contínuo e paixão por desafios
+- Desenvolvimento backend com Java e Spring Boot
+- Sustentação e evolução de sistemas críticos
+- Bancos relacionais, SQL, Oracle, PostgreSQL e MySQL
+- APIs REST, OpenAPI, Spectral e governança de contratos
+- Qualidade de código, testes, SOLID e boas práticas de arquitetura
 
+## Projeto em Destaque
 
-## 📫 Contato
+O principal projeto apresentado é o TCC **Plataforma de APIs Governadas**, uma prova de conceito sobre camada anticorrupção, API-First, Policy-as-Code, OpenAPI, Spectral, JWT, LGPD e desacoplamento de sistemas legados.
 
-Quer conversar sobre tecnologia, parcerias ou oportunidades?  
-Me chame no [LinkedIn](https://www.linkedin.com/in/ailton-juniordev/) ou envie um e-mail para: jab.junior81@gmail.com
+## Como Rodar
 
----
+```bash
+npm install
+npm run dev
+```
 
-Sinta-se à vontade para explorar meus projetos, sugerir melhorias ou apenas trocar uma ideia. Vamos construir o futuro juntos!
+Abra `http://localhost:3000`.
+
+## Build
+
+```bash
+npm run build
+```
+
+## Contato
+
+- LinkedIn: https://www.linkedin.com/in/ailton-juniordev/
+- GitHub: https://github.com/Junior-81
+- Email: jab.junior81@gmail.com
